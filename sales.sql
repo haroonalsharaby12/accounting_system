@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 01:38 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Oct 19, 2024 at 04:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,21 +53,21 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `name`, `account_type`, `is_parent`, `parent_account_number`, `account_number`, `start_balance_status`, `start_balance`, `current_balance`, `other_table_FK`, `notes`, `added_by`, `updated_by`, `created_at`, `updated_at`, `active`, `com_code`, `date`) VALUES
-(1, 'الحساب الاب للموردين', 9, 1, NULL, 1, 3, '0.00', '0.00', NULL, NULL, 1, NULL, '2023-05-14 11:31:10', '2023-05-14 11:31:10', 1, 1, '2023-05-14'),
-(2, 'الحساب الاب للعملاء', 9, 1, NULL, 2, 3, '0.00', '0.00', NULL, NULL, 1, NULL, '2023-05-14 11:31:26', '2023-05-14 11:31:26', 1, 1, '2023-05-14'),
-(3, 'الحساب الاب للمناديب', 9, 1, NULL, 3, 3, '0.00', '0.00', NULL, NULL, 1, NULL, '2023-05-14 11:31:42', '2023-05-14 11:31:42', 1, 1, '2023-05-14'),
-(4, 'البنك الاهلي المصري حساب 1', 6, 0, 4, 4, 3, '0.00', '-10000.00', NULL, NULL, 1, 1, '2023-05-14 11:32:11', '2023-05-14 13:05:14', 1, 1, '2023-05-14'),
-(5, 'فواتير الكهرباء', 7, 0, 8, 5, 3, '0.00', '0.00', NULL, NULL, 1, 1, '2023-05-14 11:32:31', '2023-05-14 13:04:03', 1, 1, '2023-05-14'),
-(6, 'فواتير الغاز', 7, 0, 8, 6, 3, '0.00', '0.00', NULL, NULL, 1, 1, '2023-05-14 11:32:43', '2023-05-14 11:33:31', 1, 1, '2023-05-14'),
-(7, 'نثريات', 7, 0, 8, 7, 3, '0.00', '0.00', NULL, NULL, 1, 1, '2023-05-14 11:33:00', '2023-05-14 11:33:23', 1, 1, '2023-05-14'),
-(8, 'مصروفات', 7, 1, NULL, 8, 3, '0.00', '0.00', NULL, NULL, 1, NULL, '2023-05-14 11:33:15', '2023-05-14 11:33:15', 1, 1, '2023-05-14'),
-(9, 'هايبر الرحاب', 3, 0, 3, 9, 3, '0.00', '0.00', 1, NULL, 1, NULL, '2023-05-14 11:34:09', '2023-05-14 13:00:30', 1, 1, '2023-05-14'),
-(10, 'هاير الراية', 3, 0, 3, 10, 2, '5000.00', '6500.00', 2, NULL, 1, NULL, '2023-05-14 11:34:44', '2023-05-14 13:01:58', 1, 1, '2023-05-14'),
-(11, 'المكتب', 4, 0, 8, 11, 3, '0.00', '0.00', 1, NULL, 1, NULL, '2023-05-14 11:35:19', '2023-05-14 11:35:19', 1, 1, '2023-05-14'),
-(12, 'عاطف دياب محمد أحمد', 4, 0, 8, 12, 1, '-500.00', '-505.00', 2, NULL, 1, NULL, '2023-05-14 11:35:42', '2023-05-14 12:54:32', 1, 1, '2023-05-14'),
-(13, 'عاطف دياب محمد', 2, 0, 1, 13, 1, '-5000.00', '-14400.00', 1, NULL, 1, NULL, '2023-05-14 11:36:55', '2023-05-14 13:01:30', 1, 1, '2023-05-14'),
-(14, 'خط الانتاج رقم 1', 5, 0, 34, 14, 3, '0.00', '90000.00', 1, NULL, 1, NULL, '2023-05-14 11:44:21', '2023-05-14 11:50:35', 1, 1, '2023-05-14'),
-(15, 'مذبح المصنع', 2, 0, 1, 15, 3, '0.00', '-1000000.00', 2, NULL, 1, NULL, '2023-05-14 11:48:39', '2023-05-14 13:07:58', 1, 1, '2023-05-14');
+(1, 'الحساب الاب للموردين', 9, 1, NULL, 1, 3, 0.00, 0.00, NULL, NULL, 1, NULL, '2023-05-14 11:31:10', '2023-05-14 11:31:10', 1, 1, '2023-05-14'),
+(2, 'الحساب الاب للعملاء', 9, 1, NULL, 2, 3, 0.00, 0.00, NULL, NULL, 1, NULL, '2023-05-14 11:31:26', '2023-05-14 11:31:26', 1, 1, '2023-05-14'),
+(3, 'الحساب الاب للمناديب', 9, 1, NULL, 3, 3, 0.00, 0.00, NULL, NULL, 1, NULL, '2023-05-14 11:31:42', '2023-05-14 11:31:42', 1, 1, '2023-05-14'),
+(4, 'بنك الرشيد', 6, 0, 4, 4, 3, 0.00, -10000.00, NULL, NULL, 1, 1, '2023-05-14 11:32:11', '2023-05-14 13:05:14', 1, 1, '2023-05-14'),
+(5, 'فواتير الكهرباء', 7, 0, 8, 5, 3, 0.00, 0.00, NULL, NULL, 1, 1, '2023-05-14 11:32:31', '2023-05-14 13:04:03', 1, 1, '2023-05-14'),
+(6, 'فواتير الغاز', 7, 0, 8, 6, 3, 0.00, 0.00, NULL, NULL, 1, 1, '2023-05-14 11:32:43', '2023-05-14 11:33:31', 1, 1, '2023-05-14'),
+(7, 'نثريات', 7, 0, 8, 7, 3, 0.00, 0.00, NULL, NULL, 1, 1, '2023-05-14 11:33:00', '2023-05-14 11:33:23', 1, 1, '2023-05-14'),
+(8, 'مصروفات', 7, 1, NULL, 8, 3, 0.00, 0.00, NULL, NULL, 1, NULL, '2023-05-14 11:33:15', '2023-05-14 11:33:15', 1, 1, '2023-05-14'),
+(9, 'هايبر الرحاب', 3, 0, 3, 9, 3, 0.00, 0.00, 1, NULL, 1, NULL, '2023-05-14 11:34:09', '2023-05-14 13:00:30', 1, 1, '2023-05-14'),
+(10, 'هاير الراية', 3, 0, 3, 10, 2, 5000.00, 6500.00, 2, NULL, 1, NULL, '2023-05-14 11:34:44', '2023-05-14 13:01:58', 1, 1, '2023-05-14'),
+(11, 'المكتب', 4, 0, 8, 11, 3, 0.00, 0.00, 1, NULL, 1, NULL, '2023-05-14 11:35:19', '2023-05-14 11:35:19', 1, 1, '2023-05-14'),
+(12, 'هارون عبده سعيد ناصر', 4, 0, 8, 12, 1, -500.00, -505.00, 2, NULL, 1, NULL, '2023-05-14 11:35:42', '2023-05-14 12:54:32', 1, 1, '2023-05-14'),
+(13, 'هارون الرشيد', 2, 0, 1, 13, 1, -5000.00, -14400.00, 1, NULL, 1, NULL, '2023-05-14 11:36:55', '2023-05-14 13:01:30', 1, 1, '2023-05-14'),
+(14, 'خط الانتاج رقم 1', 5, 0, 34, 14, 3, 0.00, 90000.00, 1, NULL, 1, NULL, '2023-05-14 11:44:21', '2023-05-14 11:50:35', 1, 1, '2023-05-14'),
+(15, 'مذبح المصنع', 2, 0, 1, 15, 3, 0.00, -1000000.00, 2, NULL, 1, NULL, '2023-05-14 11:48:39', '2023-05-14 13:07:58', 1, 1, '2023-05-14');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`id`, `name`, `permission_roles_id`, `email`, `username`, `password`, `created_at`, `updated_at`, `added_by`, `updated_by`, `active`, `com_code`, `date`) VALUES
 (1, 'الادارة العليا', 1, 'test@gmail.com', 'admin', '$2y$10$qHBrpnmqcJgMX/29x92EA.QbD7T5PWKvYO3p.RH2jclPuE4gEGqBe', '2022-08-27 15:59:31', '2023-04-19 22:22:47', NULL, 1, 1, 1, NULL),
-(2, 'محمود علي أحمد السيد', 3, 'm2023@gmail.com', 'm2023', '$2y$10$YFr.tT3k4SOvDAWO9AeuCemvFlTgm1LrUjQrqpsOHEPn.4reJaVnW', '2023-04-15 01:45:13', '2023-04-26 02:29:39', 1, 1, 1, 1, '2023-04-15');
+(2, 'هارون عبده سعيد', 3, 'haroon@gmail.com', 'haroon', '$2y$10$85gAVgoLq0g4aC.KyIqoUu4g2ZmgRkBuTMJ1dh7uDbn96H/qEv0Gm', '2023-04-15 01:45:13', '2023-04-26 02:29:39', 1, 1, 1, 1, '2023-04-15');
 
 -- --------------------------------------------------------
 
@@ -167,9 +167,9 @@ CREATE TABLE `admins_shifts` (
 --
 
 INSERT INTO `admins_shifts` (`id`, `shift_code`, `admin_id`, `treasuries_id`, `treasuries_balnce_in_shift_start`, `start_date`, `end_date`, `is_finished`, `is_delivered_and_review`, `delivered_to_admin_id`, `delivered_to_admin_sift_id`, `delivered_to_treasuries_id`, `money_should_deviled`, `what_realy_delivered`, `money_state`, `money_state_value`, `receive_type`, `review_receive_date`, `treasuries_transactions_id`, `added_by`, `created_at`, `notes`, `com_code`, `date`, `updated_by`, `updated_at`) VALUES
-(1, 1, 1, 1, '0.00', '2023-05-14 13:03:39', '2023-05-14 13:03:50', 1, 0, NULL, NULL, NULL, '0.00', NULL, NULL, '0.00', NULL, NULL, NULL, 1, '2023-05-14 13:03:39', NULL, 1, '2023-05-14', 1, '2023-05-14 13:03:50'),
-(2, 2, 1, 1, '0.00', '2023-05-14 13:03:54', '2023-05-14 13:05:23', 1, 0, NULL, NULL, NULL, '10000.00', NULL, NULL, '0.00', NULL, NULL, NULL, 1, '2023-05-14 13:03:54', NULL, 1, '2023-05-14', 1, '2023-05-14 13:05:23'),
-(3, 3, 1, 1, '0.00', '2023-05-14 13:05:35', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, '0.00', NULL, NULL, NULL, 1, '2023-05-14 13:05:35', NULL, 1, '2023-05-14', NULL, '2023-05-14 13:05:35');
+(1, 1, 1, 1, 0.00, '2023-05-14 13:03:39', '2023-05-14 13:03:50', 1, 0, NULL, NULL, NULL, 0.00, NULL, NULL, 0.00, NULL, NULL, NULL, 1, '2023-05-14 13:03:39', NULL, 1, '2023-05-14', 1, '2023-05-14 13:03:50'),
+(2, 2, 1, 1, 0.00, '2023-05-14 13:03:54', '2023-05-14 13:05:23', 1, 0, NULL, NULL, NULL, 10000.00, NULL, NULL, 0.00, NULL, NULL, NULL, 1, '2023-05-14 13:03:54', NULL, 1, '2023-05-14', 1, '2023-05-14 13:05:23'),
+(3, 3, 1, 1, 0.00, '2023-05-14 13:05:35', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, NULL, NULL, 1, '2023-05-14 13:05:35', NULL, 1, '2023-05-14', NULL, '2023-05-14 13:05:35');
 
 -- --------------------------------------------------------
 
@@ -260,7 +260,7 @@ CREATE TABLE `admin_panel_settings` (
 --
 
 INSERT INTO `admin_panel_settings` (`id`, `system_name`, `photo`, `active`, `general_alert`, `address`, `phone`, `customer_parent_account_number`, `suppliers_parent_account_number`, `delegate_parent_account_number`, `employees_parent_account_number`, `production_lines_parent_account`, `added_by`, `updated_by`, `created_at`, `updated_at`, `com_code`, `notes`, `is_set_Batches_setting`, `Batches_setting_type`, `default_unit`) VALUES
-(1, 'عاطف سوفت للبرمجيات', '1667938745648.png', 1, NULL, 'سوهاج - كوبري النيل', '012659854', 3, 1, 8, 9, 34, 0, 1, '0000-00-00 00:00:00', '2023-04-18 05:24:05', 1, 'الاضافة بالمبيعات  ctrl او enter', 1, 2, 1);
+(1, 'هارون الرشيد للانظمة المحاسبية', '', 1, NULL, 'تعز-بيرباشا', '738748031', 3, 1, 8, 9, 34, 0, 1, '0000-00-00 00:00:00', '2023-04-18 05:24:05', 1, 'الاضافة بالمبيعات  ctrl او enter', 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -293,8 +293,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `customer_code`, `name`, `account_number`, `start_balance_status`, `start_balance`, `current_balance`, `notes`, `added_by`, `updated_by`, `created_at`, `updated_at`, `active`, `com_code`, `date`, `address`, `phones`) VALUES
-(1, 1, 'هايبر الرحاب', 9, 3, '0.00', '0.00', NULL, 1, NULL, '2023-05-14 11:34:09', '2023-05-14 13:00:30', 1, 1, '2023-05-14', '16 مصر الجديدة', '0115658527'),
-(2, 2, 'هاير الراية', 10, 2, '5000.00', '6500.00', NULL, 1, NULL, '2023-05-14 11:34:44', '2023-05-14 13:01:58', 1, 1, '2023-05-14', '25 شارع النصر الجيزة', '0126552444');
+(1, 1, 'هايبر الرحاب', 9, 3, 0.00, 0.00, NULL, 1, NULL, '2023-05-14 11:34:09', '2023-05-14 13:00:30', 1, 1, '2023-05-14', 'الدحي', '779845142'),
+(2, 2, 'هاير الراية', 10, 2, 5000.00, 6500.00, NULL, 1, NULL, '2023-05-14 11:34:44', '2023-05-14 13:01:58', 1, 1, '2023-05-14', 'المركزي', '777858478');
 
 -- --------------------------------------------------------
 
@@ -332,8 +332,8 @@ CREATE TABLE `delegates` (
 --
 
 INSERT INTO `delegates` (`id`, `delegate_code`, `name`, `account_number`, `start_balance_status`, `start_balance`, `current_balance`, `notes`, `added_by`, `updated_by`, `created_at`, `updated_at`, `active`, `com_code`, `date`, `phones`, `address`, `percent_type`, `percent_collect_commission`, `percent_salaes_commission_kataei`, `percent_salaes_commission_nosjomla`, `percent_salaes_commission_jomla`) VALUES
-(1, 1, 'المكتب', 11, 3, '0.00', '0.00', NULL, 1, NULL, '2023-05-14 11:35:19', '2023-05-14 11:35:19', 1, 1, '2023-05-14', NULL, NULL, 2, '0.00', '2.00', '1.00', '0.50'),
-(2, 2, 'عاطف دياب محمد أحمد', 12, 1, '-500.00', '-505.00', NULL, 1, NULL, '2023-05-14 11:35:42', '2023-05-14 12:54:32', 1, 1, '2023-05-14', NULL, NULL, 1, '5.00', '5.00', '5.00', '5.00');
+(1, 1, 'المكتب', 11, 3, 0.00, 0.00, NULL, 1, NULL, '2023-05-14 11:35:19', '2023-05-14 11:35:19', 1, 1, '2023-05-14', NULL, NULL, 2, 0.00, 2.00, 1.00, 0.50),
+(2, 2, 'هارون الرشيد', 12, 1, -500.00, -505.00, NULL, 1, NULL, '2023-05-14 11:35:42', '2023-05-14 12:54:32', 1, 1, '2023-05-14', NULL, NULL, 1, 5.00, 5.00, 5.00, 5.00);
 
 -- --------------------------------------------------------
 
@@ -397,8 +397,8 @@ CREATE TABLE `inv_itemcard` (
 --
 
 INSERT INTO `inv_itemcard` (`id`, `item_code`, `barcode`, `name`, `item_type`, `inv_itemcard_categories_id`, `parent_inv_itemcard_id`, `does_has_retailunit`, `retail_uom_id`, `uom_id`, `retail_uom_quntToParent`, `added_by`, `created_at`, `updated_at`, `updated_by`, `active`, `date`, `com_code`, `price`, `nos_gomla_price`, `gomla_price`, `price_retail`, `nos_gomla_price_retail`, `gomla_price_retail`, `cost_price`, `cost_price_retail`, `has_fixced_price`, `All_QUENTITY`, `QUENTITY`, `QUENTITY_Retail`, `QUENTITY_all_Retails`, `photo`) VALUES
-(1, 1, 'item1', 'فراخ شهد', 2, 2, 0, 1, 2, 1, '10.00', 1, '2023-05-14 11:40:58', '2023-05-14 13:00:27', NULL, 1, '2023-05-14', 1, '1200.00', '1100.00', '1000.00', '120.00', '110.00', '100.00', '1000.00', '100.00', 1, '17.00', '17.000', '0.000', '170.000', '1684057258395.jpg'),
-(2, 2, 'item2', 'فراخ مذبوحة', 2, 2, 1, 1, 4, 3, '100.00', 1, '2023-05-14 11:47:52', '2023-05-14 11:49:37', NULL, 1, '2023-05-14', 1, '5000.00', '4500.00', '4000.00', '40.00', '35.00', '30.00', '10000.00', '100.00', 1, '90.00', '90.000', '0.000', '9000.000', '1684057672254.jpg');
+(1, 1, 'item1', 'دجاج', 2, 2, 0, 1, 2, 1, 10.00, 1, '2023-05-14 11:40:58', '2023-05-14 13:00:27', NULL, 1, '2023-05-14', 1, 1200.00, 1100.00, 1000.00, 120.00, 110.00, 100.00, 1000.00, 100.00, 1, 17.00, 17.000, 0.000, 170.000, '1684057258395.jpg'),
+(2, 2, 'item2', 'سمك', 2, 2, 1, 1, 4, 3, 100.00, 1, '2023-05-14 11:47:52', '2023-05-14 11:49:37', NULL, 1, '2023-05-14', 1, 5000.00, 4500.00, 4000.00, 40.00, 35.00, 30.00, 10000.00, 100.00, 1, 90.00, 90.000, 0.000, 9000.000, '1684057672254.jpg');
 
 -- --------------------------------------------------------
 
@@ -430,10 +430,10 @@ CREATE TABLE `inv_itemcard_batches` (
 --
 
 INSERT INTO `inv_itemcard_batches` (`id`, `store_id`, `item_code`, `inv_uoms_id`, `unit_cost_price`, `quantity`, `total_cost_price`, `production_date`, `expired_date`, `com_code`, `auto_serial`, `added_by`, `created_at`, `updated_at`, `updated_by`, `is_send_to_archived`) VALUES
-(1, 1, 1, 1, '1200.00', '6.00', '7200.00', '2023-03-01', '2023-08-24', 1, 1, 1, '2023-05-14 11:41:42', '2023-05-14 13:00:26', 1, 0),
-(2, 2, 1, 1, '1200.00', '1.00', '1200.00', '2023-03-01', '2023-08-24', 1, 2, 1, '2023-05-14 11:43:37', '2023-05-14 11:43:37', NULL, 0),
-(3, 1, 2, 3, '10000.00', '90.00', '900000.00', '2023-04-01', '2023-05-14', 1, 3, 1, '2023-05-14 11:49:20', '2023-05-14 11:49:37', 1, 0),
-(4, 2, 1, 1, '1000.00', '10.00', '10000.00', '2023-05-01', '2023-05-31', 1, 4, 1, '2023-05-14 11:50:35', '2023-05-14 11:50:35', NULL, 0);
+(1, 1, 1, 1, 1200.00, 6.00, 7200.00, '2023-03-01', '2023-08-24', 1, 1, 1, '2023-05-14 11:41:42', '2023-05-14 13:00:26', 1, 0),
+(2, 2, 1, 1, 1200.00, 1.00, 1200.00, '2023-03-01', '2023-08-24', 1, 2, 1, '2023-05-14 11:43:37', '2023-05-14 11:43:37', NULL, 0),
+(3, 1, 2, 3, 10000.00, 90.00, 900000.00, '2023-04-01', '2023-05-14', 1, 3, 1, '2023-05-14 11:49:20', '2023-05-14 11:49:37', 1, 0),
+(4, 2, 1, 1, 1000.00, 10.00, 10000.00, '2023-05-01', '2023-05-31', 1, 4, 1, '2023-05-14 11:50:35', '2023-05-14 11:50:35', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -492,18 +492,13 @@ CREATE TABLE `inv_itemcard_movements` (
 --
 
 INSERT INTO `inv_itemcard_movements` (`id`, `inv_itemcard_movements_categories`, `item_code`, `store_id`, `items_movements_types`, `FK_table`, `FK_table_details`, `byan`, `quantity_befor_movement`, `quantity_after_move`, `added_by`, `date`, `created_at`, `com_code`, `quantity_befor_move_store`, `quantity_after_move_store`) VALUES
-(1, 1, 1, 1, 1, 1, 1, 'نظير مشتريات من المورد  عاطف دياب محمد فاتورة رقم 1', 'عدد  0 كرتونة فراخ شهد', 'عدد  10 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:41:42', 1, 'عدد  0 كرتونة فراخ شهد', 'عدد  10 كرتونة فراخ شهد'),
-(2, 1, 1, 1, 3, 1, 2, ' نظير مرتجع مشتريات عام الي المورد عاطف دياب محمد فاتورة رقم 1', 'عدد  10 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:42:09', 1, 'عدد  10 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد'),
+(1, 1, 1, 1, 1, 1, 1, 'مشتريات هارون', 'عدد  0 كرتونة فراخ شهد', 'عدد  10 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:41:42', 1, 'عدد  0 كرتونة فراخ شهد', 'عدد  10 كرتونة فراخ شهد'),
+(2, 1, 1, 1, 3, 1, 2, 'مرتجع مشتريات هارون', 'عدد  10 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:42:09', 1, 'عدد  10 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد'),
 (3, 3, 1, 1, 20, 1, 1, ' نظير صرف أصناف  الي مخزن الاستلام  الفرعي بشارع الشهيد أمر تحويل رقم 1', 'عدد  7 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:43:30', 1, 'عدد  7 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد'),
 (4, 3, 1, 2, 22, 1, 1, 'نظير اعتماد واستلام امر تحويل وارد من المخزن    الرئيسي امر تحويل رقم 1', 'عدد  6 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:43:38', 1, 'عدد  0 كرتونة فراخ شهد', 'عدد  1 كرتونة فراخ شهد'),
 (5, 3, 1, 1, 6, 1, 1, 'جرد بالمخازن للباتش رقم 1 جرد رقم 1', 'عدد  7 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:44:00', 1, 'عدد  6 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد'),
 (6, 4, 1, 1, 17, 1, 1, ' نظير ًرف خامات   الي خط انتاج  خط الانتاج رقم 1 فاتورة رقم 1', 'عدد  7 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:45:14', 1, 'عدد  6 كرتونة فراخ شهد', 'عدد  5 كرتونة فراخ شهد'),
-(7, 4, 1, 1, 18, 1, 1, ' نظير حذف سطر الصنف من فاتورة صرف خامات  لخط الانتاج      خط الانتاج رقم 1 فاتورة رقم 1', 'عدد  6 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:45:22', 1, 'عدد  5 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد'),
-(8, 1, 2, 1, 1, 2, 3, 'نظير مشتريات من المورد  مذبح المصنع فاتورة رقم 2', 'عدد  0 شكارة', 'عدد  100 شكارة', 1, '2023-05-14', '2023-05-14 11:49:20', 1, 'عدد  0 شكارة', 'عدد  100 شكارة'),
-(9, 4, 2, 1, 17, 1, 2, ' نظير ًرف خامات   الي خط انتاج  خط الانتاج رقم 1 فاتورة رقم 1', 'عدد  100 شكارة', 'عدد  90 شكارة', 1, '2023-05-14', '2023-05-14 11:49:37', 1, 'عدد  100 شكارة', 'عدد  90 شكارة'),
-(10, 4, 1, 2, 19, 1, 1, 'نظير فاتورة استلام انتاج تام من خط الانتاج   خط الانتاج رقم 1 فاتورة رقم 1', 'عدد  7 كرتونة فراخ شهد', 'عدد  17 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:50:36', 1, 'عدد  1 كرتونة فراخ شهد', 'عدد  11 كرتونة فراخ شهد'),
-(11, 2, 1, 1, 4, 1, 1, 'نظير مبيعات  للعميل  هايبر الرحاب فاتورة رقم 1', 'عدد  17 كرتونة فراخ شهد', 'عدد  16 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 12:54:23', 1, 'عدد  6 كرتونة فراخ شهد', 'عدد  5 كرتونة فراخ شهد'),
-(12, 2, 1, 1, 5, 1, 1, 'نظير مرتجع مبيعات عام  للعميل  هايبر الرحاب فاتورة رقم 1', 'عدد  16 كرتونة فراخ شهد', 'عدد  17 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 13:00:26', 1, 'عدد  5 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد');
+(7, 4, 1, 1, 18, 1, 1, ' نظير حذف سطر الصنف من فاتورة صرف خامات  لخط الانتاج      خط الانتاج رقم 1 فاتورة رقم 1', 'عدد  6 كرتونة فراخ شهد', 'عدد  7 كرتونة فراخ شهد', 1, '2023-05-14', '2023-05-14 11:45:22', 1, 'عدد  5 كرتونة فراخ شهد', 'عدد  6 كرتونة فراخ شهد');
 
 -- --------------------------------------------------------
 
@@ -572,7 +567,7 @@ CREATE TABLE `inv_production_exchange` (
 --
 
 INSERT INTO `inv_production_exchange` (`id`, `order_type`, `auto_serial`, `inv_production_order_auto_serial`, `order_date`, `production_lines_code`, `is_approved`, `com_code`, `notes`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `total_cost_items`, `tax_value`, `total_befor_discount`, `total_cost`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `Supplier_balance_befor`, `Supplier_balance_after`, `added_by`, `created_at`, `updated_at`, `updated_by`, `store_id`, `approved_by`) VALUES
-(1, 1, 1, 1, '2023-05-14', 1, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '100000.00', '0.00', '100000.00', '100000.00', 14, '100000.00', 2, '0.00', '100000.00', NULL, NULL, NULL, 1, '2023-05-14 11:45:04', '2023-05-14 11:49:42', 1, 1, 1);
+(1, 1, 1, 1, '2023-05-14', 1, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 100000.00, 0.00, 100000.00, 100000.00, 14, 100000.00, 2, 0.00, 100000.00, NULL, NULL, NULL, 1, '2023-05-14 11:45:04', '2023-05-14 11:49:42', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -608,7 +603,7 @@ CREATE TABLE `inv_production_exchange_details` (
 --
 
 INSERT INTO `inv_production_exchange_details` (`id`, `inv_production_exchange_id`, `inv_production_exchange_auto_serial`, `order_type`, `com_code`, `deliverd_quantity`, `uom_id`, `isparentuom`, `unit_price`, `total_price`, `order_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `item_code`, `batch_auto_serial`, `production_date`, `expire_date`, `item_card_type`) VALUES
-(2, 1, 1, 1, 1, '10.00', 3, 1, '10000.00', '100000.00', '2023-05-14', 1, '2023-05-14 11:49:37', NULL, '2023-05-14 11:49:37', 2, 3, '2023-04-01', '2023-05-14', 2);
+(2, 1, 1, 1, 1, 10.00, 3, 1, 10000.00, 100000.00, '2023-05-14', 1, '2023-05-14 11:49:37', NULL, '2023-05-14 11:49:37', 2, 3, '2023-04-01', '2023-05-14', 2);
 
 -- --------------------------------------------------------
 
@@ -641,7 +636,7 @@ CREATE TABLE `inv_production_lines` (
 --
 
 INSERT INTO `inv_production_lines` (`id`, `production_lines_code`, `name`, `account_number`, `start_balance_status`, `start_balance`, `current_balance`, `notes`, `added_by`, `updated_by`, `created_at`, `updated_at`, `active`, `com_code`, `date`, `address`, `phones`) VALUES
-(1, 1, 'خط الانتاج رقم 1', 14, 3, '0.00', '90000.00', NULL, 1, NULL, '2023-05-14 11:44:21', '2023-05-14 11:50:35', 1, 1, '2023-05-14', NULL, NULL);
+(1, 1, 'خط الانتاج رقم 1', 14, 3, 0.00, 90000.00, NULL, 1, NULL, '2023-05-14 11:44:21', '2023-05-14 11:50:35', 1, 1, '2023-05-14', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -720,7 +715,7 @@ CREATE TABLE `inv_production_receive` (
 --
 
 INSERT INTO `inv_production_receive` (`id`, `order_type`, `auto_serial`, `inv_production_order_auto_serial`, `order_date`, `production_lines_code`, `is_approved`, `com_code`, `notes`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `total_cost_items`, `tax_value`, `total_befor_discount`, `total_cost`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `Supplier_balance_befor`, `Supplier_balance_after`, `added_by`, `created_at`, `updated_at`, `updated_by`, `store_id`, `approved_by`) VALUES
-(1, 1, 1, 1, '2023-05-14', 1, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '10000.00', '0.00', '10000.00', '10000.00', 14, '-10000.00', 2, '0.00', '10000.00', NULL, NULL, NULL, 1, '2023-05-14 11:50:04', '2023-05-14 11:50:35', 1, 2, 1);
+(1, 1, 1, 1, '2023-05-14', 1, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 10000.00, 0.00, 10000.00, 10000.00, 14, -10000.00, 2, 0.00, 10000.00, NULL, NULL, NULL, 1, '2023-05-14 11:50:04', '2023-05-14 11:50:35', 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -756,7 +751,7 @@ CREATE TABLE `inv_production_receive_details` (
 --
 
 INSERT INTO `inv_production_receive_details` (`id`, `inv_production_receive_id`, `inv_production_receive_auto_serial`, `order_type`, `com_code`, `deliverd_quantity`, `uom_id`, `isparentuom`, `unit_price`, `total_price`, `order_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `item_code`, `batch_auto_serial`, `production_date`, `expire_date`, `item_card_type`) VALUES
-(1, 1, 1, 1, 1, '10.00', 1, 1, '1000.00', '10000.00', '2023-05-14', 1, '2023-05-14 11:50:31', NULL, '2023-05-14 11:50:31', 1, NULL, '2023-05-01', '2023-05-31', 2);
+(1, 1, 1, 1, 1, 10.00, 1, 1, 1000.00, 10000.00, '2023-05-14', 1, '2023-05-14 11:50:31', NULL, '2023-05-14 11:50:31', 1, NULL, '2023-05-01', '2023-05-31', 2);
 
 -- --------------------------------------------------------
 
@@ -788,7 +783,7 @@ CREATE TABLE `inv_stores_inventory` (
 --
 
 INSERT INTO `inv_stores_inventory` (`id`, `store_id`, `inventory_date`, `inventory_type`, `auto_serial`, `is_closed`, `total_cost_batches`, `notes`, `added_by`, `date`, `created_at`, `updated_by`, `updated_at`, `com_code`, `cloased_by`, `closed_at`) VALUES
-(1, 1, '2023-05-14', 1, 1, 1, '7200.00', NULL, 1, '2023-05-14', '2023-05-14 11:43:47', NULL, '2023-05-14 11:44:00', 1, 1, '2023-05-14 11:44:00');
+(1, 1, '2023-05-14', 1, 1, 1, 7200.00, NULL, 1, '2023-05-14', '2023-05-14 11:43:47', NULL, '2023-05-14 11:44:00', 1, 1, '2023-05-14 11:44:00');
 
 -- --------------------------------------------------------
 
@@ -826,7 +821,7 @@ CREATE TABLE `inv_stores_inventory_details` (
 --
 
 INSERT INTO `inv_stores_inventory_details` (`id`, `inv_stores_inventory_id`, `inv_stores_inventory_auto_serial`, `item_code`, `inv_uoms_id`, `batch_auto_serial`, `old_quantity`, `new_quantity`, `diffrent_quantity`, `unit_cost_price`, `total_cost_price`, `production_date`, `expired_date`, `notes`, `is_closed`, `added_by`, `created_at`, `updated_by`, `updated_at`, `cloased_by`, `closed_at`, `com_code`) VALUES
-(1, 1, 1, 1, 1, 1, '6.00', '6.00', '0.00', '1200.00', '7200.00', '2023-03-01', '2023-08-24', NULL, 1, 1, '2023-05-14 11:43:55', NULL, '2023-05-14 11:44:00', 1, '2023-05-14 11:44:00', 1);
+(1, 1, 1, 1, 1, 1, 6.00, 6.00, 0.00, 1200.00, 7200.00, '2023-03-01', '2023-08-24', NULL, 1, 1, '2023-05-14 11:43:55', NULL, '2023-05-14 11:44:00', 1, '2023-05-14 11:44:00', 1);
 
 -- --------------------------------------------------------
 
@@ -858,7 +853,7 @@ CREATE TABLE `inv_stores_transfer` (
 --
 
 INSERT INTO `inv_stores_transfer` (`id`, `auto_serial`, `transfer_from_store_id`, `transfer_to_store_id`, `order_date`, `is_approved`, `com_code`, `notes`, `items_counter`, `total_cost_items`, `added_by`, `created_at`, `updated_at`, `updated_by`, `approved_by`, `approved_at`) VALUES
-(1, 1, 1, 2, '2023-05-14', 0, 1, NULL, '1.00', '1200.00', 1, '2023-05-14 11:43:14', '2023-05-14 11:43:30', 1, NULL, NULL);
+(1, 1, 1, 2, '2023-05-14', 0, 1, NULL, 1.00, 1200.00, 1, '2023-05-14 11:43:14', '2023-05-14 11:43:30', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -901,7 +896,7 @@ CREATE TABLE `inv_stores_transfer_details` (
 --
 
 INSERT INTO `inv_stores_transfer_details` (`id`, `inv_stores_transfer_id`, `inv_stores_transfer_auto_serial`, `com_code`, `deliverd_quantity`, `uom_id`, `isparentuom`, `unit_price`, `total_price`, `order_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `item_code`, `production_date`, `expire_date`, `item_card_type`, `transfer_from_batch_id`, `transfer_to_batch_id`, `is_approved`, `approved_by`, `approved_at`, `is_canceld_receive`, `canceld_by`, `canceld_at`, `canceld_cause`) VALUES
-(1, 1, 1, 1, '1.00', 1, 1, '1200.00', '1200.00', '2023-05-14', 1, '2023-05-14 11:43:30', NULL, '2023-05-14 11:43:38', 1, '2023-03-01', '2023-08-24', 2, 1, NULL, 1, 1, '2023-05-14 11:43:38', 0, NULL, NULL, NULL);
+(1, 1, 1, 1, 1.00, 1, 1, 1200.00, 1200.00, '2023-05-14', 1, '2023-05-14 11:43:30', NULL, '2023-05-14 11:43:38', 1, '2023-03-01', '2023-08-24', 2, 1, NULL, 1, 1, '2023-05-14 11:43:38', 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1269,7 +1264,7 @@ CREATE TABLE `sales_invoices` (
 --
 
 INSERT INTO `sales_invoices` (`id`, `sales_matrial_types`, `auto_serial`, `invoice_date`, `is_has_customer`, `customer_code`, `delegate_code`, `delegate_commission_percent_type`, `delegate_commission_percent`, `delegate_commission_value`, `is_approved`, `com_code`, `notes`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `total_cost_items`, `tax_value`, `total_befor_discount`, `total_cost`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `customer_balance_befor`, `customer_balance_after`, `added_by`, `created_at`, `updated_at`, `updated_by`, `approved_by`, `date`, `sales_item_type`) VALUES
-(1, 2, 1, '2023-05-14', 1, 1, 2, '1.00', '5.00', '-5.00', 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '1200.00', '0.00', '1200.00', '1200.00', 9, '1200.00', 2, '0.00', '0.00', NULL, NULL, NULL, 1, '2023-05-14 12:54:12', '2023-05-14 12:54:32', 1, 1, '2023-05-14', 1);
+(1, 2, 1, '2023-05-14', 1, 1, 2, 1.00, 5.00, -5.00, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 1200.00, 0.00, 1200.00, 1200.00, 9, 1200.00, 2, 0.00, 0.00, NULL, NULL, NULL, 1, '2023-05-14 12:54:12', '2023-05-14 12:54:32', 1, 1, '2023-05-14', 1);
 
 -- --------------------------------------------------------
 
@@ -1310,7 +1305,7 @@ CREATE TABLE `sales_invoices_details` (
 --
 
 INSERT INTO `sales_invoices_details` (`id`, `sales_invoices_id`, `sales_invoices_auto_serial`, `store_id`, `sales_item_type`, `item_code`, `uom_id`, `batch_auto_serial`, `quantity`, `unit_price`, `total_price`, `is_normal_orOther`, `isparentuom`, `com_code`, `invoice_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `production_date`, `expire_date`, `date`, `itemCostPriceFromBatch`, `taoalitemCostPriceFromBatch`, `item_total_earnings`) VALUES
-(1, 1, 1, 1, 1, 1, 1, 1, '1.0000', '1200.00', '1200.00', 1, 1, 1, '2023-05-14', 1, '2023-05-14 12:54:23', NULL, '2023-05-14 12:54:23', NULL, NULL, '2023-05-14', '1200.00', '1200.00', '0.00');
+(1, 1, 1, 1, 1, 1, 1, 1, 1.0000, 1200.00, 1200.00, 1, 1, 1, '2023-05-14', 1, '2023-05-14 12:54:23', NULL, '2023-05-14 12:54:23', NULL, NULL, '2023-05-14', 1200.00, 1200.00, 0.00);
 
 -- --------------------------------------------------------
 
@@ -1359,7 +1354,7 @@ CREATE TABLE `sales_invoices_return` (
 --
 
 INSERT INTO `sales_invoices_return` (`id`, `return_type`, `sales_matrial_types`, `auto_serial`, `invoice_date`, `is_has_customer`, `customer_code`, `delegate_code`, `is_approved`, `com_code`, `notes`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `total_cost_items`, `tax_value`, `total_befor_discount`, `total_cost`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `customer_balance_befor`, `customer_balance_after`, `added_by`, `created_at`, `updated_at`, `updated_by`, `approved_by`, `date`) VALUES
-(1, 2, 1, 1, '2023-05-14', 1, 1, 2, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '1200.00', '0.00', '1200.00', '1200.00', 9, '-1200.00', 2, '0.00', '1200.00', NULL, NULL, NULL, 1, '2023-05-14 12:54:46', '2023-05-14 13:00:30', 1, 1, '2023-05-14');
+(1, 2, 1, 1, '2023-05-14', 1, 1, 2, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 1200.00, 0.00, 1200.00, 1200.00, 9, -1200.00, 2, 0.00, 1200.00, NULL, NULL, NULL, 1, '2023-05-14 12:54:46', '2023-05-14 13:00:30', 1, 1, '2023-05-14');
 
 -- --------------------------------------------------------
 
@@ -1398,7 +1393,7 @@ CREATE TABLE `sales_invoices_return_details` (
 --
 
 INSERT INTO `sales_invoices_return_details` (`id`, `sales_invoices_return_id`, `sales_invoices_auto_serial`, `store_id`, `sales_item_type`, `item_code`, `uom_id`, `batch_auto_serial`, `quantity`, `unit_cost_price`, `unit_price`, `total_price`, `is_normal_orOther`, `isparentuom`, `com_code`, `invoice_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `production_date`, `expire_date`, `date`) VALUES
-(1, 1, 1, 1, 1, 1, 1, 1, '1.0000', NULL, '1200.00', '1200.00', 1, 1, 1, '2023-05-14', 1, '2023-05-14 13:00:26', NULL, '2023-05-14 13:00:26', NULL, NULL, '2023-05-14');
+(1, 1, 1, 1, 1, 1, 1, 1, 1.0000, NULL, 1200.00, 1200.00, 1, 1, 1, '2023-05-14', 1, '2023-05-14 13:00:26', NULL, '2023-05-14 13:00:26', NULL, NULL, '2023-05-14');
 
 -- --------------------------------------------------------
 
@@ -1495,8 +1490,8 @@ CREATE TABLE `services_with_orders` (
 --
 
 INSERT INTO `services_with_orders` (`id`, `order_type`, `auto_serial`, `order_date`, `is_approved`, `com_code`, `notes`, `total_services`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `tax_value`, `total_befor_discount`, `total_cost`, `is_account_number`, `entity_name`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `added_by`, `created_at`, `updated_at`, `updated_by`, `approved_by`) VALUES
-(1, 1, 1, '2023-05-14', 1, 1, NULL, '1000.00', NULL, '0.00', '0.00', '0.00', '0.00', '1000.00', '1000.00', 1, NULL, 13, '-1000.00', 2, '0.00', '1000.00', NULL, 1, '2023-05-14 13:01:17', '2023-05-14 13:01:30', 1, 1),
-(2, 2, 1, '2023-05-14', 1, 1, NULL, '1500.00', NULL, '0.00', '0.00', '0.00', '0.00', '1500.00', '1500.00', 1, NULL, 10, '1500.00', 2, '0.00', '1500.00', NULL, 1, '2023-05-14 13:01:43', '2023-05-14 13:01:57', 1, 1);
+(1, 1, 1, '2023-05-14', 1, 1, NULL, 1000.00, NULL, 0.00, 0.00, 0.00, 0.00, 1000.00, 1000.00, 1, NULL, 13, -1000.00, 2, 0.00, 1000.00, NULL, 1, '2023-05-14 13:01:17', '2023-05-14 13:01:30', 1, 1),
+(2, 2, 1, '2023-05-14', 1, 1, NULL, 1500.00, NULL, 0.00, 0.00, 0.00, 0.00, 1500.00, 1500.00, 1, NULL, 10, 1500.00, 2, 0.00, 1500.00, NULL, 1, '2023-05-14 13:01:43', '2023-05-14 13:01:57', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1525,8 +1520,8 @@ CREATE TABLE `services_with_orders_details` (
 --
 
 INSERT INTO `services_with_orders_details` (`id`, `services_with_orders_id`, `services_with_orders_auto_serial`, `order_type`, `service_id`, `notes`, `total`, `added_by`, `updated_by`, `created_at`, `updated_at`, `com_code`, `date`) VALUES
-(1, 1, 1, 1, 1, NULL, '1000.00', 1, NULL, '2023-05-14 13:01:26', '2023-05-14 13:01:26', 1, '2023-05-14'),
-(2, 2, 1, 2, 2, NULL, '1500.00', 1, NULL, '2023-05-14 13:01:54', '2023-05-14 13:01:54', 1, '2023-05-14');
+(1, 1, 1, 1, 1, NULL, 1000.00, 1, NULL, '2023-05-14 13:01:26', '2023-05-14 13:01:26', 1, '2023-05-14'),
+(2, 2, 1, 2, 2, NULL, 1500.00, 1, NULL, '2023-05-14 13:01:54', '2023-05-14 13:01:54', 1, '2023-05-14');
 
 -- --------------------------------------------------------
 
@@ -1629,9 +1624,9 @@ CREATE TABLE `suppliers_with_orders` (
 --
 
 INSERT INTO `suppliers_with_orders` (`id`, `order_type`, `auto_serial`, `DOC_NO`, `order_date`, `suuplier_code`, `is_approved`, `com_code`, `notes`, `discount_type`, `discount_percent`, `discount_value`, `tax_percent`, `total_cost_items`, `tax_value`, `total_befor_discount`, `total_cost`, `account_number`, `money_for_account`, `pill_type`, `what_paid`, `what_remain`, `treasuries_transactions_id`, `Supplier_balance_befor`, `Supplier_balance_after`, `added_by`, `created_at`, `updated_at`, `updated_by`, `store_id`, `approved_by`) VALUES
-(1, 1, 1, '1', '2023-05-14', 1, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '12000.00', '0.00', '12000.00', '12000.00', 13, '-12000.00', 2, '0.00', '12000.00', NULL, NULL, NULL, 1, '2023-05-14 11:41:19', '2023-05-14 11:41:42', 1, 1, 1),
-(2, 3, 1, NULL, '2023-05-14', 1, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '3600.00', '0.00', '3600.00', '3600.00', 13, '3600.00', 2, '0.00', '3600.00', NULL, NULL, NULL, 1, '2023-05-14 11:41:56', '2023-05-14 11:42:17', 1, 1, 1),
-(3, 1, 2, '2', '2023-05-14', 2, 1, 1, NULL, NULL, '0.00', '0.00', '0.00', '1000000.00', '0.00', '1000000.00', '1000000.00', 15, '-1000000.00', 2, '0.00', '1000000.00', NULL, NULL, NULL, 1, '2023-05-14 11:48:55', '2023-05-14 11:49:20', 1, 1, 1);
+(1, 1, 1, '1', '2023-05-14', 1, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 12000.00, 0.00, 12000.00, 12000.00, 13, -12000.00, 2, 0.00, 12000.00, NULL, NULL, NULL, 1, '2023-05-14 11:41:19', '2023-05-14 11:41:42', 1, 1, 1),
+(2, 3, 1, NULL, '2023-05-14', 1, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 3600.00, 0.00, 3600.00, 3600.00, 13, 3600.00, 2, 0.00, 3600.00, NULL, NULL, NULL, 1, '2023-05-14 11:41:56', '2023-05-14 11:42:17', 1, 1, 1),
+(3, 1, 2, '2', '2023-05-14', 2, 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 1000000.00, 0.00, 1000000.00, 1000000.00, 15, -1000000.00, 2, 0.00, 1000000.00, NULL, NULL, NULL, 1, '2023-05-14 11:48:55', '2023-05-14 11:49:20', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1667,9 +1662,9 @@ CREATE TABLE `suppliers_with_orders_details` (
 --
 
 INSERT INTO `suppliers_with_orders_details` (`id`, `suppliers_with_order_id`, `suppliers_with_orders_auto_serial`, `order_type`, `com_code`, `deliverd_quantity`, `uom_id`, `isparentuom`, `unit_price`, `total_price`, `order_date`, `added_by`, `created_at`, `updated_by`, `updated_at`, `item_code`, `batch_auto_serial`, `production_date`, `expire_date`, `item_card_type`) VALUES
-(1, 1, 1, 1, 1, '10.00', 1, 1, '1200.00', '12000.00', '2023-05-14', 1, '2023-05-14 11:41:37', NULL, '2023-05-14 11:41:37', 1, NULL, '2023-03-01', '2023-08-24', 2),
-(2, 2, 1, 3, 1, '3.00', 1, 1, '1200.00', '3600.00', '2023-05-14', 1, '2023-05-14 11:42:09', NULL, '2023-05-14 11:42:09', 1, 1, '2023-03-01', '2023-08-24', 2),
-(3, 3, 2, 1, 1, '100.00', 3, 1, '10000.00', '1000000.00', '2023-05-14', 1, '2023-05-14 11:49:16', NULL, '2023-05-14 11:49:16', 2, NULL, '2023-04-01', '2023-05-14', 2);
+(1, 1, 1, 1, 1, 10.00, 1, 1, 1200.00, 12000.00, '2023-05-14', 1, '2023-05-14 11:41:37', NULL, '2023-05-14 11:41:37', 1, NULL, '2023-03-01', '2023-08-24', 2),
+(2, 2, 1, 3, 1, 3.00, 1, 1, 1200.00, 3600.00, '2023-05-14', 1, '2023-05-14 11:42:09', NULL, '2023-05-14 11:42:09', 1, 1, '2023-03-01', '2023-08-24', 2),
+(3, 3, 2, 1, 1, 100.00, 3, 1, 10000.00, 1000000.00, '2023-05-14', 1, '2023-05-14 11:49:16', NULL, '2023-05-14 11:49:16', 2, NULL, '2023-04-01', '2023-05-14', 2);
 
 -- --------------------------------------------------------
 
@@ -1703,8 +1698,8 @@ CREATE TABLE `suupliers` (
 --
 
 INSERT INTO `suupliers` (`id`, `suuplier_code`, `suppliers_categories_id`, `name`, `account_number`, `start_balance_status`, `start_balance`, `current_balance`, `notes`, `added_by`, `updated_by`, `created_at`, `updated_at`, `active`, `com_code`, `date`, `address`, `phones`) VALUES
-(1, 1, 1, 'عاطف دياب محمد', 13, 1, '-5000.00', '-14400.00', NULL, 1, NULL, '2023-05-14 11:36:54', '2023-05-14 13:01:30', 1, 1, '2023-05-14', NULL, NULL),
-(2, 2, 1, 'مذبح المصنع', 15, 3, '0.00', '-1000000.00', NULL, 1, NULL, '2023-05-14 11:48:39', '2023-05-14 13:07:58', 1, 1, '2023-05-14', NULL, NULL);
+(1, 1, 1, 'عاطف دياب محمد', 13, 1, -5000.00, -14400.00, NULL, 1, NULL, '2023-05-14 11:36:54', '2023-05-14 13:01:30', 1, 1, '2023-05-14', NULL, NULL),
+(2, 2, 1, 'مذبح المصنع', 15, 3, 0.00, -1000000.00, NULL, 1, NULL, '2023-05-14 11:48:39', '2023-05-14 13:07:58', 1, 1, '2023-05-14', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1795,7 +1790,7 @@ CREATE TABLE `treasuries_transactions` (
 --
 
 INSERT INTO `treasuries_transactions` (`id`, `auto_serial`, `isal_number`, `shift_code`, `money`, `treasuries_id`, `is_approved`, `mov_type`, `move_date`, `the_foregin_key`, `account_number`, `is_account`, `money_for_account`, `byan`, `created_at`, `added_by`, `updated_at`, `updated_by`, `com_code`) VALUES
-(1, 1, 1, 2, '10000.00', 1, 1, 25, '2023-05-14', NULL, 4, 1, '-10000.00', 'تحصيل نظير  نظير مرتبات', '2023-05-14 13:05:14', 1, '2023-05-14 13:05:14', NULL, 1);
+(1, 1, 1, 2, 10000.00, 1, 1, 25, '2023-05-14', NULL, 4, 1, -10000.00, 'تحصيل نظير  نظير مرتبات', '2023-05-14 13:05:14', 1, '2023-05-14 13:05:14', NULL, 1);
 
 -- --------------------------------------------------------
 
